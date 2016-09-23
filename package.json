@@ -1,0 +1,34 @@
+{
+  "name": "fake_avalon2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fake",
+    "avalon2"
+  ],
+  "author": "zhouyc",
+  "license": "ISC",
+  "dependencies": {
+    "avalon2": "~2.1.1",
+    "html-minify-loader": "~1.1.0",
+    "jquery": "^1.11.3",
+    "node-sass": "^3.8.0",
+    "raw-loader": "~0.5.1",
+    "sass-loader": "^3.2.2",
+    "style-loader": "~0.13.1",
+    "url-loader": "0.5.7",
+    "css-loader": "~0.8.0",
+    "file-loader": "~0.9.0",
+    "image-webpack-loader": "^2.0.0",
+    "webpack": "^1.13.1",
+
+    "extract-text-webpack-plugin": "^1.0.1"
+  },
+  "devDependencies": {
+
+  }
+}
