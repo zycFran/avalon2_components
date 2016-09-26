@@ -1,0 +1,19 @@
+.dropdown-group .dropdown-toggle:hover  {
+    text-decoration: none;
+}
+.dropdown-group .dropdown-toggle  input:hover,
+.dropdown-group .dropdown-toggle  input[readonly]{
+    cursor: pointer;
+    cursor: hand;
+    background: white;
+}
+.dropdown-menu a{
+    text-align: left;
+}
+.dropdown-menu a i{
+    color: white;
+}
+.dropdown-menu a:hover i,
+.dropdown-menu .selected i{
+    color: #f50;
+}

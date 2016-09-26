@@ -1,0 +1,26 @@
+<div class="dropdown custom-dropdown active">
+    <div class="dropdown-group">
+        <a style="font-size:14px;" class="dropdown-toggle"
+           type="button" data-toggle="dropdown">
+            <input type="text" class="form-control placeholder"
+                   ms-click="@focusHandler($event)"
+                   ms-attr="{readonly:@readonly, placeholder: @placeholder}"
+                   ms-duplex="@selectValue">
+            <span class="caret cursorHand"
+                  style="position: absolute;top: 15px;right: 10px;"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu"
+            ms-visible="@showList"
+            ms-css="{left: @left, width: @width}">
+            <li role="presentation" value="1"
+                ms-class="{selected:$index==@sIndex}"
+                ms-click="@selectHandler($event, el, $index)"
+                ms-for='($index, el) in @list'>
+                <a role="menuitem" tabindex="1" href="javascript:void(0);">
+                    <i class="fa fa-check"></i>
+                    {{el.name}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
