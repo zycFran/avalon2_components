@@ -34,3 +34,26 @@ dropdown_config: {
     readonly: false
 }
 ```
+
+## 时间组件 (基于MyDate97)
+
+```js
+datetimepicker_config: {
+    $options: {
+        dateFmt: 'yyyy-MM-dd HH:mm:ss',
+        autoPickDate: true
+    }
+}
+```
+
+## address_config (仿淘宝 省市区三级)
+
+```js
+address_config: {
+    levels: [
+        { name: '省份', selectItem: []},
+        { name: '城市', selectItem: []},
+        { name: '县区', selectItem: []}
+    ]
+}
+```
