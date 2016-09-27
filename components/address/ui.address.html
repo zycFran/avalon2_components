@@ -1,0 +1,50 @@
+<div class="dropdown custom-dropdown active">
+    <div class="dropdown-group">
+        <a style="font-size:14px;" class="dropdown-toggle" type="button">
+            <input type="text" class="form-control placeholder text-overflow" readonly
+                   ms-duplex="@selectValue" style="width: 100%;"
+                   ms-click="@focusHandler($event)"
+                   placeholder="请选择">
+            <span class="caret cursorHand" style="position: absolute;top: 15px;right: 10px;"></span>
+        </a>
+
+        <div class="select-other-wrap dropdown-menu address_dropdown multi_dropdown"
+             ms-visible="@showList">
+            <div class="level-select-tab">
+                <a class="cursorHand"
+                   ms-class="{current:$index==@curLevel}"
+                   ms-click="@tabChangeHandler($index, $event)"
+                   ms-for='($index, el) in @levels'>{{el.name}}</a>
+            </div>
+            <div class="level-select-content">
+                <div class="level-select clearfix"
+                     ms-for='($index,level) in @levels'
+                     ms-visible="@curLevel==$index">
+                    <dl class="fn-clear clearfix"
+                        ms-if="$index==0"
+                        ms-for='province in @provinceData'>
+                        <dt>{{province.name}}</dt>
+                        <dd>
+                            <a ms-for='item in province.list'
+                               class="level-select-item cursorHand"
+                               ms-attr="{title:item[1]}"
+                               ms-class="{current:item[0]==@levels[@curLevel]['selectItem'][0]}"
+                               ms-click="@selectHandler(item, @curLevel,$event)"
+                               href="javascript:;">{{item[1]}}</a>
+                        </dd>
+                    </dl>
+
+                    <dl ms-if="$index>0" class="fn-clear city-select-city">
+                        <dd>
+                            <a ms-for='item in @curList'
+                               ms-attr={title:item[1]}
+                               ms-class="{current:item[0]==@levels[@curLevel]['selectItem'][0]}"
+                               ms-click="@selectHandler(item, @curLevel,$event)"
+                               href="javascript:;">{{item[1]}}</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
