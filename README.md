@@ -16,3 +16,21 @@ pager_config: {
     onPageClick: function(e, p){},
 }
 ```
+## 下拉组件
+
+```js
+dropdown_config: {
+    list: [
+        {name: 'a', value: 'aaaa'},
+        {name: 'b', value: 'aaab'},
+        {name: 'c', value: 'aaac'},
+        {name: 'd', value: 'aaad'},
+        {name: 'e', value: 'aaae'}
+    ],
+    afterSelect: function(selectRecord){
+        console.log(selectRecord);
+    },
+    placeholder: '请下拉选择',
+    readonly: false
+}
+```
