@@ -1,0 +1,146 @@
+@charset "UTF-8";
+/*
+这是每个都组件都应该引用的部分
+*/
+.ui-carousel {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 300px;
+    height: 100px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none; }
+.ui-carousel .ui-carousel-panel {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden; }
+.ui-carousel .ui-carousel-panel .ui-carousel-item {
+    position: relative;
+    height: 100%;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff; }
+.ui-carousel .ui-carousel-panel .ui-carousel-item a{
+    display: block;
+}
+.ui-carousel .ui-carousel-panel .ui-carousel-item img{
+    width: 100%;
+}
+.ui-carousel .ui-carousel-panel .ui-carousel-item .ui-img-origin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: static\0;
+    transform: translate(0, 0) \0;
+    *top: 0;
+    *left: 0; }
+.ui-carousel .ui-carousel-panel .ui-carousel-item .ui-img-placeholder {
+    _display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -30px 0 0 -30px; }
+.ui-carousel .ui-carousel-panel .ui-carousel-item .ui-carousel-link {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;}
+.ui-carousel .ui-carousel-selection-wrap {
+    position: absolute;
+    z-index: 20;
+    /*bottom: 4%;*/
+    bottom: 10px;
+    z-index:10;
+    left: 50%; }
+.ui-carousel .ui-carousel-selection-wrap a {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #fff;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+    opacity: 0.6;
+    border-radius: 50%;
+    cursor: pointer; }
+.ui-carousel .ui-carousel-selection-wrap .selected {
+    background-color: #e37222; }
+.ui-carousel .ui-carousel-selection-wrap-keep-right {
+    left: initial;
+    right: 3%; }
+.ui-carousel .ui-carousel-description-wrap {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    color: #fff;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+    /*-webkit-touch-callout: text;*/
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text; }
+.ui-carousel .ui-carousel-description-wrap .ui-carousel-description {
+    padding: 8px 12px; }
+.ui-carousel .ui-carousel-arrow {
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    margin: -15px 0 0 0;
+    cursor: pointer; }
+.ui-carousel .ui-carousel-prev {
+    left: 5%; }
+.ui-carousel .ui-carousel-after {
+    right: 5%; }
+
+
+.ui-carousel .background{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 33px;
+    z-index: 5;
+    background-color: rgba(0,0,0,.5);
+}
+.ui-carousel .right-btn{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -32px;
+    margin-right: 50px;
+}
+.ui-carousel .left-btn{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -32px;
+    margin-left: 50px;
+}
+/*# sourceMappingURL=avalon.carousel.css.map */

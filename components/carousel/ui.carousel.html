@@ -1,0 +1,43 @@
+<div id="ui-carousel"
+     class="ui-carousel"
+     ms-css="{width:@pictureWidth, height: @pictureHeight}"
+     ms-mouseenter="@stopPlay"
+     ms-mouseleave="@restartPlay('carousel')"
+        >
+    <div id="ui-carousel-panel"
+         class="ui-carousel-panel"
+         ms-css="{width: @pictureWidth*@picNum, left: @panelOffsetX, position: @panelPosition}">
+        <div class="ui-carousel-item"
+             ms-for="($index, el) in @pictures"
+             ms-css="{width: @pictureWidth, position: @itemPosition, opacity:@getOpacity($index)}"
+                >
+            <a ms-attr="{href: el.href}" target="_blank">
+                <img ms-attr="{src: el.pic}" alt=""/>
+            </a>
+
+        </div>
+    </div>
+    <a class="left-btn">
+        <img class="arrow prev png24"
+             ms-attr="{src: @arrowLeftSrc}"
+             ms-click="@animate(-1)"
+             ms-mouseenter="@arrowHover('left')"
+             ms-mouseleave="@arrowBlur('left')">
+    </a>
+    <a class="right-btn"><img class="arrow after png24"
+                                  ms-attr="{src: @arrowRightSrc}"
+            ms-click="@animate(1)"
+            ms-mouseenter="@arrowHover('right')"
+            ms-mouseleave="@arrowBlur('right')"></a>
+
+    <div class="ui-carousel-selection-wrap"
+         ms-visible="@alwaysShowSelection">
+        <a ms-class="{selected:$index==@currentIndex}"
+           ms-mouseenter="@selectPic($index,$event)"
+           ms-click="@selectPic($index,$event)"
+           ms-mouseleave="@restartPlay('tab')"
+           ms-for="($index, el) in @selections"></a>
+    </div>
+    <div class="background"></div>
+
+</div>
