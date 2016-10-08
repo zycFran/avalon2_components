@@ -1,0 +1,25 @@
+<div class="upload-wrap">
+    <div class="clearfix">
+        <div ms-attr="{id: @uploadBtnId}"
+             class="picker_btn"
+             style="width: 130px;float: left;">{{@uploadText}}</div>
+    </div>
+    <div class="box-body" style="padding-left: 0;">
+        <div class="uploader-demo" style="width: 880px;margin-top: 15px;">
+            <div class="uploader-list">
+                <div ms-class="{upload_state_done: el.value}"
+                     class="file-item thumbnail"
+                     ms-for='($index, el) in @uploadList'>
+                    <img ms-attr="{src: el.thumbUrl}">
+
+                    <div class="info">{{el.name}}</div>
+                    <div class="close" ms-click="@removeHandler(el, $index)"></div>
+                    <p class="progress" ms-visible="el.state=='progress'">
+                        <span ms-css="{width: el.progress}"></span>
+                    </p>
+                    <div class="error" ms-visible="el.state=='fail'">上传失败</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
